@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+using timesheet.Models;
+
 namespace timesheet.Controllers
 {
     [HandleError]
@@ -11,9 +13,16 @@ namespace timesheet.Controllers
     {
         public ActionResult Index()
         {
-            ViewData["Message"] = "Welcome to ASP.NET MVC!";
+            // Fake timesheets for now...
+            var timesheets = new TimeSheetCollection();
 
-            return View();
+            var todayWork = new TimeSheet();
+            todayWork.Date = DateTime.Today;
+            todayWork.HoursWorked = 8.25;
+            timesheets.Add(todayWork);
+
+
+            return View(timesheets);
         }
 
         public ActionResult About()

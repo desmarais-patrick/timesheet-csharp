@@ -1,12 +1,23 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<timesheet.Models.TimeSheetCollection>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Home Page
+    Feuilles de temps
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <h2><%: ViewData["Message"] %></h2>
-    <p>
-        To learn more about ASP.NET MVC visit <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
-    </p>
+    <div class="text-center">
+        <h2>Feuilles de temps</h2>
+    </div>
+    <div>
+        <ul>
+            <% foreach (var m in Model)
+               { %>
+                    <li>
+                        <span><%= m.Date.ToString("d") %></span>
+                        <span>Travail</span>
+                        <span><%= m.HoursWorked %>h</span>
+                    </li>
+            <% } %>
+        </ul>
+    </div>
 </asp:Content>
