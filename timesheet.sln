@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "timesheet", "timesheet\timesheet.csproj", "{9A6E59D2-0433-4D1C-B8FE-B75056F3B498}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "timesheet.Tests", "timesheet.Tests\timesheet.Tests.csproj", "{14F48426-AE50-4D3B-B8BE-89B1CEA7B4DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A6E59D2-0433-4D1C-B8FE-B75056F3B498}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A6E59D2-0433-4D1C-B8FE-B75056F3B498}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A6E59D2-0433-4D1C-B8FE-B75056F3B498}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A6E59D2-0433-4D1C-B8FE-B75056F3B498}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14F48426-AE50-4D3B-B8BE-89B1CEA7B4DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14F48426-AE50-4D3B-B8BE-89B1CEA7B4DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14F48426-AE50-4D3B-B8BE-89B1CEA7B4DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14F48426-AE50-4D3B-B8BE-89B1CEA7B4DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
