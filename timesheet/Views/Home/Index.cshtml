@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="text-center">
+    <h1>Feuilles de temps</h1>
+</div>
+<div style="margin-left: auto; margin-right: auto; max-width: 400px; margin-top: 40px;">
+    <ul class="list-group">
+        @foreach (var m in Model) {
+            <li class="list-group-item">
+                <span class="badge">@m.HoursWorked h</span>
+                <span>@m.Date.ToString("d")</span>
+                <span style="padding-left: 10px">Travail</span>
+            </li>
+        }
+    </ul>
+</div>
