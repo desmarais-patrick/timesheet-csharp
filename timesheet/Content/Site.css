@@ -1,6 +1,6 @@
-﻿#main.container 
+﻿#main 
 {
-    margin-top: 40px;
+    min-height: 500px;
 }
 
 .footer 

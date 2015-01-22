@@ -15,11 +15,17 @@ namespace timesheet.Controllers
             // Fake timesheets for now...
             var timesheets = new TimeSheetCollection();
 
-            var todayWork = new TimeSheet();
-            todayWork.Date = DateTime.Today;
-            todayWork.HoursWorked = 8.25;
-            timesheets.Add(todayWork);
+            var ts1 = new TimeSheet();
+            ts1.Date = new System.DateTime(2014, 1, 21);
+            ts1.WorkSubject = "Mise en place du projet, versionnement sur Git, stylisation avec Bootstrap";
+            ts1.HoursWorked = 5.25;
+            timesheets.Add(ts1);
 
+            var ts2 = new TimeSheet();
+            ts2.Date = new System.DateTime(2014, 1, 22);
+            ts2.WorkSubject = "Déploiement sur Azure, migration à VS2013";
+            ts2.HoursWorked = 6.50;
+            timesheets.Add(ts2);
 
             return View(timesheets);
         }

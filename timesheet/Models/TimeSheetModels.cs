@@ -15,6 +15,11 @@ namespace timesheet.Models
         [DisplayName("Date")]
         public DateTime Date { get; set; }
 
+        [Required]
+        [DataType(DataType.Text)]
+        [DisplayName("Sujet du travail")]
+        public string WorkSubject { get; set; }
+
         [Range(0.0, 24.0, ErrorMessage = "La temps de travail doit se situer entre 0 et 24 heures.")]
         [DataType(DataType.Text)]
         [DisplayName("Temps de travail")]

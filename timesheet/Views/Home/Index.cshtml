@@ -5,13 +5,15 @@
 <div class="text-center">
     <h1>Feuilles de temps</h1>
 </div>
-<div style="margin-left: auto; margin-right: auto; max-width: 400px; margin-top: 40px;">
+<div class="row">
+    <h2>Temps sur ce projet</h2>
     <ul class="list-group">
-        @foreach (var m in Model) {
+        @foreach (var m in Model)
+        {
             <li class="list-group-item">
-                <span class="badge">@m.HoursWorked h</span>
-                <span>@m.Date.ToString("d")</span>
-                <span style="padding-left: 10px">Travail</span>
+                <span class="col-sm-2 badge">@m.HoursWorked h</span>
+                <span>@m.Date.ToString("d")</span><br />
+                <span>@m.WorkSubject</span>
             </li>
         }
     </ul>
