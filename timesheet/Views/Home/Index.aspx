@@ -8,14 +8,14 @@
     <div class="text-center">
         <h2>Feuilles de temps</h2>
     </div>
-    <div>
-        <ul>
+    <div style="margin-left: auto; margin-right: auto; max-width: 400px; margin-top: 40px;">
+        <ul class="list-group">
             <% foreach (var m in Model)
                { %>
-                    <li>
+                    <li class="list-group-item">
+                        <span class="badge"><%= m.HoursWorked %>h</span>
                         <span><%= m.Date.ToString("d") %></span>
-                        <span>Travail</span>
-                        <span><%= m.HoursWorked %>h</span>
+                        <span style="padding-left: 10px">Travail</span>
                     </li>
             <% } %>
         </ul>
