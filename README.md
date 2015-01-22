@@ -1,2 +1,8 @@
-# timesheet-csharp
-Example ASP.NET-C# web application
+# Timesheet
+
+Example ASP.NET-C# web application using MVC.
+
+## Links
+
+Deployed on Azure Websites:
+http://pdes06-timesheet-csharp.azurewebsites.net/
