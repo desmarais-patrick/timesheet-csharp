@@ -1,10 +1,57 @@
-﻿@{
+﻿@Model timesheet.Models.TimeSheetCollection
+
+@{
     ViewBag.Title = "À propos de ce site";
 }
-<div class="text-center">
-    <h2>@ViewBag.Title</h2>
+
+<div class="jumbotron">
+    <div class="container">
+        <div class="text-center">
+            <h1>@ViewBag.Title</h1>
+        </div>
+
+        <div class="text-center" style="margin: 40px 0">
+            <p>Ce site est une simple d'application Web ASP.NET-C# suivant la structure MVC.</p>
+        </div>
+    </div>
 </div>
 
-<div class="text-center" style="margin-top: 40px">
-    <p>Ce site est un exemple d'application Web ASP.NET-C# suivant la structure MVC.</p>
+<div class="container">
+    <div class="row jumbotron-following-section">
+        <div class="col-sm-6">
+            <h2 style="padding-bottom: 30px;">
+                Le projet est disponible sur GitHub:
+                <a href="https://github.com/pdes06/timesheet-csharp">github.com/pdes06/timesheet-csharp</a>.
+            </h2>
+        </div>
+        <div class="col-sm-6">
+            <div style=" width: 100%;">
+                <img class="img-responsive" style="margin-left: auto; margin-right: auto;" src="@Url.Content("~/img/github-mark.png")" />
+            </div>
+        </div>
+    </div>
+
+
+    @{
+        ViewBag.TimeSheetListTitle = "Temps sur ce projet";
+    }
+    <div class="row jumbotron-following-section">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2>@ViewBag.TimeSheetListTitle</h2>
+                    <ul class="list-group">
+                        @foreach (var ts in Model)
+                        {
+                            <li class="list-group-item">
+                                <span class="col-sm-2 badge">@(ts.HoursWorked)h</span>
+                                <span>@ts.Date.ToString("d")</span><br />
+                                <span>@ts.WorkSubject</span>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

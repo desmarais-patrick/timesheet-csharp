@@ -1,6 +1,16 @@
-﻿#main 
+﻿#main.jumbotron {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.jumbotron, .jumbotron-following-section
 {
-    min-height: 500px;
+    min-height: 250px;
+}
+
+.jumbotron-following-section {
+    margin: 30px 0;
+    padding: 15px 0;
 }
 
 .footer 

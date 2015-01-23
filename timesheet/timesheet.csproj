@@ -125,6 +125,8 @@
     <Content Include="Content\Site.css" />
     <None Include="Properties\PublishProfiles\local-timesheet.pubxml" />
     <None Include="Properties\PublishProfiles\pdes06-timesheet-csharp.pubxml" />
+    <Content Include="img\GitHub-Mark.png" />
+    <Content Include="img\timesheet-preview.png" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

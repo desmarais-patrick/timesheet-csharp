@@ -12,7 +12,11 @@ namespace timesheet.Controllers
     {
         public ActionResult Index()
         {
-            // Fake timesheets for now...
+            return View();
+        }
+
+        public ActionResult About()
+        {
             var timesheets = new TimeSheetCollection();
 
             var ts1 = new TimeSheet();
@@ -28,20 +32,6 @@ namespace timesheet.Controllers
             timesheets.Add(ts2);
 
             return View(timesheets);
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
         }
     }
 }
