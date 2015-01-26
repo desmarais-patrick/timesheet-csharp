@@ -6,12 +6,12 @@ using System.Web.Mvc;
 
 namespace timesheet.Controllers
 {
-    public class TimeSheetController : Controller
+    public class TimeSheetsController : Controller
     {
         // GET: TimeSheet
         public string /*ActionResult*/ Index()
         {
-            return "This is my default response!"; View();
+            return "This is my default response!"; // View();
         }
     }
 }
