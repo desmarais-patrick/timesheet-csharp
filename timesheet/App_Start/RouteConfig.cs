@@ -16,6 +16,8 @@ namespace timesheet
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
+                    // /TimeSheets --> TimeSheetsController class
+                    // /TimeSheets/Index --> TimeSheetsController#Index()
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
         }
