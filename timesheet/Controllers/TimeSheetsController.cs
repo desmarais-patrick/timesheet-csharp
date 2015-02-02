@@ -15,7 +15,12 @@ namespace timesheet.Controllers
         public string /*ActionResult*/ Index(string sortOrder, int fromIndex = 0, int range = 20)
         {
             int order = (sortOrder == "ASC" ? ASCENDING_ORDER : DESCENDING_ORDER);
-            return HttpUtility.HtmlEncode("Timesheets order (" + order + ") in batch of " + range + " from index " + fromIndex); // View();
+            return HttpUtility.HtmlEncode("Time sheets ordered by " + order + " (0 ascending, 1 descending) in batch of " + range + " entries, starting from index " + fromIndex); // View();
+        }
+
+        public string Detail(int ID = 1)
+        {
+            return HttpUtility.HtmlEncode("Time sheet #" + ID);
         }
     }
 }
