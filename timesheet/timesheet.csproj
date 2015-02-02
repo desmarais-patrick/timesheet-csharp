@@ -142,12 +142,13 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\TimeSheets\Index.cshtml" />
+    <Content Include="Views\TimeSheets\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="fonts\" />
     <Folder Include="Scripts\" />
-    <Folder Include="Views\TimeSheets\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
