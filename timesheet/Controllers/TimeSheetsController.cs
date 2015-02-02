@@ -9,9 +9,9 @@ namespace timesheet.Controllers
     public class TimeSheetsController : Controller
     {
         // GET: TimeSheet
-        public string /*ActionResult*/ Index()
+        public string /*ActionResult*/ Index(string sortOrder = "ASC", int range = 20)
         {
-            return "This is my default response!"; // View();
+            return HttpUtility.HtmlEncode("Timesheets ordered " + sortOrder + " in batch of " + range); // View();
         }
     }
 }
