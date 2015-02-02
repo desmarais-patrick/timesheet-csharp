@@ -11,16 +11,26 @@ namespace timesheet.Controllers
         int ASCENDING_ORDER = 0;
         int DESCENDING_ORDER = 1;
 
-        // GET: TimeSheet
-        public string /*ActionResult*/ Index(string sortOrder, int fromIndex = 0, int range = 20)
+        // GET /TimeSheets
+        public string /*ActionResult*/ Index(int ID = 0, string sortOrder = null, int fromIndex = 0, int range = 20)
         {
-            int order = (sortOrder == "ASC" ? ASCENDING_ORDER : DESCENDING_ORDER);
-            return HttpUtility.HtmlEncode("Time sheets ordered by " + order + " (0 ascending, 1 descending) in batch of " + range + " entries, starting from index " + fromIndex); // View();
+            if (ID > 0)
+            {
+                return ShowDetail(ID);
+            }
+
+            int normalizedSortOrder = (sortOrder == "ASC" ? ASCENDING_ORDER : DESCENDING_ORDER);
+            return ShowList(normalizedSortOrder, fromIndex, range);
         }
 
-        public string Detail(int ID = 1)
+        private string ShowDetail(int ID)
         {
             return HttpUtility.HtmlEncode("Time sheet #" + ID);
+        }
+
+        private string ShowList(int sortOrder, int fromIndex, int range)
+        {
+            return HttpUtility.HtmlEncode("Time sheets ordered by " + sortOrder + " (0 ascending, 1 descending) in batch of " + range + " entries, starting from index " + fromIndex); // View();
         }
     }
 }

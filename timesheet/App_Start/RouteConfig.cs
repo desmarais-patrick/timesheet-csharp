@@ -14,11 +14,15 @@ namespace timesheet
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "TimeSheets",
+                url: "TimeSheets/{id}",
+                defaults: new { controller = "TimeSheets", action = "Index", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{id}",
-                    // /TimeSheets --> TimeSheetsController class
-                    // /TimeSheets/Index --> TimeSheetsController#Index()
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                url: "{controller}/{action}",
+                defaults: new { controller = "Home", action = "Index" }
             );
         }
     }
